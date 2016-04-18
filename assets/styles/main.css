@@ -12,6 +12,10 @@ a{
     color: #899aa6;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 .blog-logo img{
     width: 80px;
     height: auto;
