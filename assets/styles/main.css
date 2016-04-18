@@ -75,10 +75,12 @@ a{
 
 .page-copyright{
     color: #899aa6;
+    float: left;
 }
 
 .page-poweredby{
     color: #899aa6;
+    float: right;
 }
 
 
@@ -87,12 +89,19 @@ a{
         width: 0% !important; 
     }
     
+    .container .jumbotron, .container-fluid .jumbotron {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+   
+    
     body.nav-opened .nav-cover {
         width: 100% !important; 
     }
     
     .menu-button-open{
         right: 10px !important;
+        z-index: -2000 !important;
     }
     
     body.nav-closed .nav {
@@ -107,6 +116,10 @@ a{
         -webkit-transform: translate3D(0, 0, 0);
             -ms-transform: translate3D(0, 0, 0);
                 transform: translate3D(0, 0, 0);
+    }
+
+    .page-poweredby{
+        float: left;
     }
 }
 
@@ -154,6 +167,7 @@ body > div > div.nav.main-nav.overlay.clearfix > ul > li.list-group-item{
     white-space: nowrap;
     border-radius: 3px;
     transition: all 0.5s ease;
+    z-index: 10;
 }
 
 .menu-button-open{
