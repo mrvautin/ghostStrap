@@ -1,0 +1,10 @@
+{{!< default}}
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <div class="text-center">
+            {{#if prev}}<a class="pull-left btn btn-default newer-posts" href="{{page_url prev}}">Last</a>{{/if}}
+            <span class="page-number">Page {{page}} of {{pages}}</span>
+            {{#if next}}<a class="pull-right btn btn-default older-posts" href="{{page_url next}}">Next</a>{{/if}}
+        </div>
+    </div>
+</div>

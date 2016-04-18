@@ -1,0 +1,14 @@
+<div class="vertical">
+    <div class="main-header-content inner">
+        <h1 class="page-title">{{tag.name}}</h1>
+        <h2 class="page-description">
+            {{#if tag.description}}
+                {{tag.description}}
+            {{else}}
+                A {{pagination.total}}-post collection
+            {{/if}}
+        </h2>
+    </div>
+</div>
+
+{{!< index}}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{asset '/styles/main.css'}}">
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+    <body class="{{body_class}}">
+        <div class="container-fluid">
+            {{#if @blog.navigation}}
+                <a class="menu-button icon-menu" href="#"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+            {{/if}}
+            {{!-- header --}}
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                        <h1>
+                            {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+                            <a href="{{@blog.url}}">{{@blog.title}}</a>
+                        </h1>
+                        <p>{{@blog.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{navigation}}
+            
+            {{!-- content --}}
+            <div id="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {{{body}}}
+            </div>
+            
+            {{!-- footer --}}
+            <div class="row">
+                <div class="page-footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="page-copyright pull-left">&copy; {{date format='YYYY'}} <a href="{{@blog.url}}">{{@blog.title}}</a>. All rights reserved.</div>
+                    <div class="page-poweredby pull-right">Proudly powered by <a href="http://ghost.org" target="_blank">Ghost</a></div>
+                </div>
+            </div>
+
+            {{!-- ghost body --}}
+            {{ghost_body}}
+        </div>
+    
+        {{!-- scripts --}}
+        <script type="text/javascript" src="{{asset '/scripts/jquery.js'}}"></script>
+        <script type="text/javascript" src="{{asset '/scripts/main.js'}}"></script>
+    </body>
+</html>

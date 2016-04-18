@@ -1,0 +1,10 @@
+<div class="nav main-nav overlay clearfix">
+    <h3 class="nav-title">Menu</h3>
+    <button type="button" class="nav-close close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <ul class="list-group">
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}} list-group-item"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+</div>   
+<span class="nav-cover"></span>
