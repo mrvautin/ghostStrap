@@ -1,3 +1,8 @@
+/* 
+===================================
+website wide
+=================================== 
+*/
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -84,47 +89,11 @@ a{
 }
 
 
-@media only screen and (max-width: 480px) {
-    .nav {
-        width: 0% !important; 
-    }
-    
-    .container .jumbotron, .container-fluid .jumbotron {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-   
-    
-    body.nav-opened .nav-cover {
-        width: 100% !important; 
-    }
-    
-    .menu-button-open{
-        right: 10px !important;
-        z-index: -2000 !important;
-    }
-    
-    body.nav-closed .nav {
-    width: 0% !important; 
-    -webkit-transform: translate3D(97px, 0, 0);
-        -ms-transform: translate3D(97px, 0, 0);
-            transform: translate3D(97px, 0, 0);
-    }
-
-    body.nav-opened .nav {
-        width: 100% !important; 
-        -webkit-transform: translate3D(0, 0, 0);
-            -ms-transform: translate3D(0, 0, 0);
-                transform: translate3D(0, 0, 0);
-    }
-
-    .page-poweredby{
-        float: left;
-    }
-}
-
-/* Navigation */
-
+/* 
+===================================
+navigation
+=================================== 
+*/
 body > div > div.nav.main-nav.overlay.clearfix > ul > li.list-group-item{
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important; 
@@ -260,4 +229,48 @@ body > div > div.nav > ul > li.nav-home.nav-current.list-group-item{
 .nav a:active,
 .nav a:focus {
     color: #23527c;
+}
+
+
+/* 
+===================================
+media queries
+=================================== 
+*/
+@media only screen and (max-width: 480px) {
+    .nav {
+        width: 0% !important; 
+    }
+    
+    .container .jumbotron, .container-fluid .jumbotron {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    body.nav-opened .nav-cover {
+        width: 100% !important; 
+    }
+    
+    .menu-button-open{
+        right: 10px !important;
+        z-index: -2000 !important;
+    }
+    
+    body.nav-closed .nav {
+    width: 0% !important; 
+    -webkit-transform: translate3D(97px, 0, 0);
+        -ms-transform: translate3D(97px, 0, 0);
+            transform: translate3D(97px, 0, 0);
+    }
+
+    body.nav-opened .nav {
+        width: 100% !important; 
+        -webkit-transform: translate3D(0, 0, 0);
+            -ms-transform: translate3D(0, 0, 0);
+                transform: translate3D(0, 0, 0);
+    }
+
+    .page-poweredby{
+        float: left;
+    }
 }

@@ -1,6 +1,6 @@
 {{!< default}}
 {{#post}}
-    <div id="{{id}}" class="{{post_class}} col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+    <div id="{{id}}" class="{{post_class}} col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
         <h1 class="post-title"><a href="{{url}}" title="{{title}}">{{title}}</a></h1>
         <div class="post-time text-muted" datetime="{{date format="YYYY-MM-DDTHH:MM:SS"}}">{{date published_at format='Do MMMM YYYY'}}
             {{#author}}<span class="post-author"><a href="{{url}}">{{name}}</a></span>{{/author}}
@@ -8,7 +8,7 @@
         {{{content}}}
     </div>
     {{#if tags}}
-        <div id="{{id}}" class="{{post_class}} col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <div id="{{id}}" class="{{post_class}} col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
             <span class="post-tag-lead">Tags:</span>
             <ul class="post-tags">
                 {{#foreach tags}}<li><a href="{{url}}" title="{{name}}">{{name}}</a></li>{{/foreach}}

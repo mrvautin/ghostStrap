@@ -1,9 +1,9 @@
 {{#foreach posts}}
     <div class="row">
-        <div id="{{id}}" class="{{post_class}} post-wrapper col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <div id="{{id}}" class="{{post_class}} post-wrapper col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
 
             <h2 class="post-title"><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
-            <div class="post-time text-muted" datetime="{{date format="YYYY-MM-DDTHH:MM:SS"}}">{{date published_at format='Do MMMM YYYY'}}
+            <div class="post-time" datetime="{{date format="YYYY-MM-DDTHH:MM:SS"}}">{{date published_at format='Do MMMM YYYY'}}
                 {{#author}}<span class="post-author"><a href="{{url}}">{{name}}</a></span>{{/author}}
             </div>
             
